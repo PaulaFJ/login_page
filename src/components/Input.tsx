@@ -1,15 +1,18 @@
 import React from 'react'
 
 interface InputProps {
-  placehold: string
+  placeholder: string,
+  id: string,
+  type: string
 }
 
-function Input({placehold}: InputProps) {
+function Input({placeholder, id, type}: InputProps) {
   return (
     <input 
-      type="text"
-      className="rounded-full mt-8 border-1 border-brand-brown-100 text-brand-gray-100 text-sm font-light w-[435px]"
-      placeholder={placehold}
+      id={id}
+      type={type}
+      className="rounded-full border-1 border-brand-brown-100 text-brand-brown-100 text-sm font-normal w-[450px] placeholder:text-brand-brown-100"
+      placeholder={placeholder}
     />
   )
 }

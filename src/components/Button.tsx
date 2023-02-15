@@ -1,13 +1,14 @@
 import { ReactNode } from 'react'
 
 interface ButtonProps {
+  id?: string,
   children: ReactNode,
   classes: String,
   disabled?: boolean,
   onClick?: () => void,
 }
 
-function Button({onClick, children, classes, disabled}: ButtonProps) {
+function Button({onClick, children, classes, disabled, id}: ButtonProps) {
   return (
     <div 
       className={`
